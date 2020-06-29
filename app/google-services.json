@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88493436875",
+    "firebase_url": "https://hillarisconferences.firebaseio.com",
+    "project_id": "hillarisconferences",
+    "storage_bucket": "hillarisconferences.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88493436875:android:cfd08612607cbba681504e",
+        "android_client_info": {
+          "package_name": "com.applications.hillarisconferences"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88493436875-dc9hvd7k2b74pgfv6v79qfh37vmcu8e0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0TbKiN4tFHCF3mNlO1bEeWsldvQd5IVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88493436875-dc9hvd7k2b74pgfv6v79qfh37vmcu8e0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
