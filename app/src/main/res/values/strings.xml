@@ -354,5 +354,6 @@
     <string name="tab_text_2">Registrations List</string>
     <string name="registrations_list">Registrations List</string>
     <string name="fcm_token" translatable="false">FCM Token: %s</string>
+    <string name="belgium">Belgium</string>
 
 </resources>
