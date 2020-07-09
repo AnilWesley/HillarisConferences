@@ -104,7 +104,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         }
 
 
-        String text = Html.fromHtml(result.getTitle()).toString();
+        String text = Html.fromHtml(result.getShort_name()).toString();
 
         holder.articleTitle.setText(text);
         if (model.get(position).getConf_type().equalsIgnoreCase("conference")) {

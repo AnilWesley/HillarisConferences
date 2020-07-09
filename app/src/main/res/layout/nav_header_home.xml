@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:textSize="11sp"
-            android:text="www.pulsusconference.com"
+            android:text="www.hilarisconferences.com"
             android:textColor="@color/white" />
     </LinearLayout>
 

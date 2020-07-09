@@ -7,7 +7,7 @@ public class ConferenceBanner {
 
     /**
      * status : true
-     * conference : [{"id":"6192","conf_type":"conference","short_name":"Pediatric Dental Care 2020","title":"6<sup>th<\/sup> Annual Congress on Pediatric Dentistry & Orthodontics","city":"Auckland","country":"Newzealand","subject":"Pediatrics","start_date":"2020-02-10","end_date":"2020-02-11","url":"pediatric.dentistryconferences.com","icon_url":null,"slider_url":"https://d2cax41o7ahm5l.cloudfront.net/cs/upload-images/pediatricdentalcare2020-420.jpg"}]
+     * conference : [{"id":"60","conf_type":"webinar","short_name":"Trauma, Emergency Medicine & Critical Care 2020","city":"Rome","country":"Italy","subject":"Medicine","start_date":"2020-09-17","end_date":"2020-09-18","url":"https://www.hilarisconferences.com/emergencymedicine","icon_url":"https://s3.amazonaws.com/hilaris/conf_icons/trauma-growth-60-60.jpg"}]
      */
 
     private boolean status;
@@ -31,32 +31,28 @@ public class ConferenceBanner {
 
     public static class ConferenceBean {
         /**
-         * id : 6192
-         * conf_type : conference
-         * short_name : Pediatric Dental Care 2020
-         * title : 6<sup>th</sup> Annual Congress on Pediatric Dentistry & Orthodontics
-         * city : Auckland
-         * country : Newzealand
-         * subject : Pediatrics
-         * start_date : 2020-02-10
-         * end_date : 2020-02-11
-         * url : pediatric.dentistryconferences.com
-         * icon_url : null
-         * slider_url : https://d2cax41o7ahm5l.cloudfront.net/cs/upload-images/pediatricdentalcare2020-420.jpg
+         * id : 60
+         * conf_type : webinar
+         * short_name : Trauma, Emergency Medicine & Critical Care 2020
+         * city : Rome
+         * country : Italy
+         * subject : Medicine
+         * start_date : 2020-09-17
+         * end_date : 2020-09-18
+         * url : https://www.hilarisconferences.com/emergencymedicine
+         * icon_url : https://s3.amazonaws.com/hilaris/conf_icons/trauma-growth-60-60.jpg
          */
 
         private String id;
         private String conf_type;
         private String short_name;
-        private String title;
         private String city;
         private String country;
         private String subject;
         private String start_date;
         private String end_date;
         private String url;
-        private Object icon_url;
-        private String slider_url;
+        private String icon_url;
 
         public String getId() {
             return id;
@@ -80,14 +76,6 @@ public class ConferenceBanner {
 
         public void setShort_name(String short_name) {
             this.short_name = short_name;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
         }
 
         public String getCity() {
@@ -138,20 +126,12 @@ public class ConferenceBanner {
             this.url = url;
         }
 
-        public Object getIcon_url() {
+        public String getIcon_url() {
             return icon_url;
         }
 
-        public void setIcon_url(Object icon_url) {
+        public void setIcon_url(String icon_url) {
             this.icon_url = icon_url;
-        }
-
-        public String getSlider_url() {
-            return slider_url;
-        }
-
-        public void setSlider_url(String slider_url) {
-            this.slider_url = slider_url;
         }
     }
 }

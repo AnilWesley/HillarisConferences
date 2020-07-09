@@ -308,7 +308,7 @@ public class DashBoardActivity extends AppCompatActivity {
                         date.setText(date3);
 
 
-                        String text = Html.fromHtml(modelList.get(0).getTitle()).toString();
+                        String text = Html.fromHtml(modelList.get(0).getShort_name()).toString();
                         title.setText(text);
 
                         if (conf_type.equalsIgnoreCase("conference")) {

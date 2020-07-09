@@ -17,6 +17,15 @@
         android:childDivider="@null"
         android:groupIndicator="@null"
         android:layout_margin="@dimen/padding_10"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptyView"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:text="No Tracks Found"/>
 
     <include
         layout="@layout/progressbar"

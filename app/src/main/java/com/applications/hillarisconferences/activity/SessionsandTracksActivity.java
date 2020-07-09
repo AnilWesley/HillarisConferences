@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -50,6 +51,8 @@ public class SessionsandTracksActivity extends AppCompatActivity {
     ExpandableListView sessionandTrackList;
     @BindView(R.id.progressBar)
     LinearLayout progressBar;
+    @BindView(R.id.emptyView)
+    TextView emptyView;
 
 
     @Override
@@ -170,7 +173,9 @@ public class SessionsandTracksActivity extends AppCompatActivity {
                         countriesExpandableListAdapter = new SessionsExpandableListAdapter(SessionsandTracksActivity.this, parentItems, childItems);
                         sessionandTrackList.setAdapter(countriesExpandableListAdapter);
                     } else {
-                        Toast.makeText(SessionsandTracksActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                        emptyView.setVisibility(View.VISIBLE);
+                        //Toast.makeText(SessionsandTracksActivity.this, "No Tracks Found", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

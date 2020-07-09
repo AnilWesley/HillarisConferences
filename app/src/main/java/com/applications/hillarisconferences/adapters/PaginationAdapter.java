@@ -143,7 +143,7 @@ public class PaginationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 }
 
 
-                String text = Html.fromHtml(result.getTitle()).toString();
+                String text = Html.fromHtml(result.getShort_name()).toString();
 
 
                 movieVH.articleTitle.setText(text);

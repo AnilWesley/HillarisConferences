@@ -37,7 +37,7 @@ public class BannerAdapter extends SliderViewAdapter<BannerAdapter.SliderAdapter
         viewHolder.textViewDescription.setText("");
 
         Glide.with(viewHolder.itemView)
-                .load(dataBeans.get(position).getSlider_url())
+                .load(dataBeans.get(position).getIcon_url())
                 .apply(new RequestOptions().placeholder(R.drawable.homepage).error(R.drawable.homepage))
                 .into(viewHolder.imageViewBackground);
 
