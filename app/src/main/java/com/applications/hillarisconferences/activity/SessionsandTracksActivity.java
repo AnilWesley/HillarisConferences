@@ -112,7 +112,7 @@ public class SessionsandTracksActivity extends AppCompatActivity {
                         for (Sessions.TracksBean countryItemList : resultBeanList) {
                             TrackNames countryItem = new TrackNames();
                             countryItem.setCountryId(countryItemList.getId());
-                            countryItem.setCountryName(countryItemList.getTrackName());
+                            countryItem.setCountryName(countryItemList.getTrack_name());
                             countryItem.setDescription(countryItemList.getDescription());
 
 
@@ -121,7 +121,7 @@ public class SessionsandTracksActivity extends AppCompatActivity {
                             for (Sessions.TracksBean.SubTracksBean citiesBean : citiesBeanList) {
 
                                 SubTrackNames cityItem = new SubTrackNames();
-                                cityItem.setCityName(citiesBean.getTrackName());
+                                cityItem.setCityName(citiesBean.getSub_track_name());
                                 arSubCategory.add(cityItem);
                             }
 

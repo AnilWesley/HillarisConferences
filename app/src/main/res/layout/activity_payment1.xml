@@ -137,7 +137,6 @@
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginEnd="0dp"
-                                android:entries="@array/category"
                                 android:spinnerMode="dialog" />
                         </RelativeLayout>
 
@@ -174,9 +173,9 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:orientation="horizontal"
-                            android:weightSum="3.5">
+                            android:weightSum="2.5">
 
 
                             <TextView
@@ -203,17 +202,7 @@
                                 android:textSize="10sp"
                                 tools:ignore="SmallSp" />
 
-                            <TextView
-                                android:id="@+id/txtDate3"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
+
 
                             <TextView
                                 android:id="@+id/txthide"
@@ -232,7 +221,7 @@
                             android:gravity="center"
                             android:orientation="horizontal"
                             android:padding="5dp"
-                            android:weightSum="3.5">
+                            android:weightSum="2.5">
 
                             <TextView
                                 android:id="@+id/txtPrice1"
@@ -258,17 +247,7 @@
                                 android:textSize="12sp"
                                 tools:ignore="SmallSp" />
 
-                            <TextView
-                                android:id="@+id/txtPrice3"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp"
-                                tools:ignore="SmallSp" />
+
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -292,361 +271,6 @@
 
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/yrfCard"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:elevation="3dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="5dp"
-                    app:cardUseCompatPadding="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/proxima_nova_bold"
-                            android:text="Choose Your Product"
-                            android:textColor="@color/black" />
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:background="@drawable/drop">
-
-                            <Spinner
-                                android:id="@+id/spinnerCategoryYRF"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="0dp"
-                                android:spinnerMode="dialog" />
-                        </RelativeLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:weightSum="3.5">
-
-
-                            <TextView
-                                android:id="@+id/txtDate12"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txtDate22"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txtDate32"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txthide2"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/itemChildLayout2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/white"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="5dp"
-                            android:weightSum="3.5">
-
-                            <TextView
-                                android:id="@+id/txtPrice12"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/txtPrice22"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/txtPrice32"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5"
-                                android:orientation="vertical">
-
-                                <CheckBox
-                                    android:id="@+id/textAdd2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="end"
-                                    android:button="@drawable/checkbox"
-                                    android:gravity="center"
-                                    android:padding="5dp"
-                                    android:visibility="visible" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ePosterCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:elevation="3dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="5dp"
-                    app:cardUseCompatPadding="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/proxima_nova_bold"
-                            android:text="Choose Your Product"
-                            android:textColor="@color/black" />
-
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:background="@drawable/drop">
-
-                            <Spinner
-                                android:id="@+id/spinnerCategoryEposter"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="0dp"
-                                android:spinnerMode="dialog" />
-                        </RelativeLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:weightSum="3.5">
-
-
-                            <TextView
-                                android:id="@+id/txtDate13"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txtDate23"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txtDate33"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@+id/txthide3"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/itemChildLayout3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/white"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="5dp"
-                            android:weightSum="3.5">
-
-                            <TextView
-                                android:id="@+id/txtPrice13"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/txtPrice23"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/txtPrice33"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/proxima_nova_bold"
-                                android:gravity="center"
-                                android:padding="2dp"
-                                android:textColor="@color/red"
-                                android:textSize="12sp" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5"
-                                android:orientation="vertical">
-
-                                <CheckBox
-                                    android:id="@+id/textAdd3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="end"
-                                    android:button="@drawable/checkbox"
-                                    android:gravity="center"
-                                    android:padding="5dp"
-                                    android:visibility="visible" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/addOnCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:elevation="3dp"
-                    android:visibility="gone"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="5dp"
-                    app:cardUseCompatPadding="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/proxima_nova_bold"
-                            android:text="ADD-On Registrations"
-                            android:textColor="@color/black" />
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/addOnRecycler"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:background="#1DB3B1B1"
-                            android:nestedScrollingEnabled="true" />
-
-                    </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
 
 

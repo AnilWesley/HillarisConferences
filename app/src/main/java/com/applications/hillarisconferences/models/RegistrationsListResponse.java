@@ -7,7 +7,7 @@ public class RegistrationsListResponse {
 
     /**
      * status : true
-     * result : [{"title":"9th International Conference on  Clinical and Medical Case Reports","conf_type":"conference","city":"Amsterdam","country":"Netherlands","order_no":"312226","name":null,"email":"","currency":"eur","price":"110"},{"title":"International Conference on Physical Education, Sports Medicine and Doping Studies","conf_type":"conference","city":"Osaka","country":"Japan","order_no":"312227","name":null,"email":"lina1986@live.be","currency":"eur","price":"740"}]
+     * result : [{"short_name":"Trauma, Emergency Medicine & Critical Care 2020","country":"American Samoa","name":"Anil K","conf_id":"60","order_no":"399","amount":" 499","date_of_payment":"July 10, 2020","email":"anilwesley94@gmail.com","phone":"1222","paystatus":"approved"},{"short_name":"Trauma, Emergency Medicine & Critical Care 2020","country":"American Samoa","name":"Anil K","conf_id":"60","order_no":"400","amount":"GBP 499","date_of_payment":"July 10, 2020","email":"anilwesley94@gmail.com","phone":"1233","paystatus":"approved"}]
      */
 
     private boolean status;
@@ -31,49 +31,35 @@ public class RegistrationsListResponse {
 
     public static class ResultBean {
         /**
-         * title : 9th International Conference on  Clinical and Medical Case Reports
-         * conf_type : conference
-         * city : Amsterdam
-         * country : Netherlands
-         * order_no : 312226
-         * name : null
-         * email :
-         * currency : eur
-         * price : 110
+         * short_name : Trauma, Emergency Medicine & Critical Care 2020
+         * country : American Samoa
+         * name : Anil K
+         * conf_id : 60
+         * order_no : 399
+         * amount :  499
+         * date_of_payment : July 10, 2020
+         * email : anilwesley94@gmail.com
+         * phone : 1222
+         * paystatus : approved
          */
 
-        private String title;
-        private String conf_type;
-        private String city;
+        private String short_name;
         private String country;
+        private String name;
+        private String conf_id;
         private String order_no;
-        private Object name;
+        private String amount;
+        private String date_of_payment;
         private String email;
-        private String currency;
-        private String price;
+        private String phone;
+        private String paystatus;
 
-        public String getTitle() {
-            return title;
+        public String getShort_name() {
+            return short_name;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getConf_type() {
-            return conf_type;
-        }
-
-        public void setConf_type(String conf_type) {
-            this.conf_type = conf_type;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public void setCity(String city) {
-            this.city = city;
+        public void setShort_name(String short_name) {
+            this.short_name = short_name;
         }
 
         public String getCountry() {
@@ -84,6 +70,22 @@ public class RegistrationsListResponse {
             this.country = country;
         }
 
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getConf_id() {
+            return conf_id;
+        }
+
+        public void setConf_id(String conf_id) {
+            this.conf_id = conf_id;
+        }
+
         public String getOrder_no() {
             return order_no;
         }
@@ -92,12 +94,20 @@ public class RegistrationsListResponse {
             this.order_no = order_no;
         }
 
-        public Object getName() {
-            return name;
+        public String getAmount() {
+            return amount;
         }
 
-        public void setName(Object name) {
-            this.name = name;
+        public void setAmount(String amount) {
+            this.amount = amount;
+        }
+
+        public String getDate_of_payment() {
+            return date_of_payment;
+        }
+
+        public void setDate_of_payment(String date_of_payment) {
+            this.date_of_payment = date_of_payment;
         }
 
         public String getEmail() {
@@ -108,20 +118,20 @@ public class RegistrationsListResponse {
             this.email = email;
         }
 
-        public String getCurrency() {
-            return currency;
+        public String getPhone() {
+            return phone;
         }
 
-        public void setCurrency(String currency) {
-            this.currency = currency;
+        public void setPhone(String phone) {
+            this.phone = phone;
         }
 
-        public String getPrice() {
-            return price;
+        public String getPaystatus() {
+            return paystatus;
         }
 
-        public void setPrice(String price) {
-            this.price = price;
+        public void setPaystatus(String paystatus) {
+            this.paystatus = paystatus;
         }
     }
 }

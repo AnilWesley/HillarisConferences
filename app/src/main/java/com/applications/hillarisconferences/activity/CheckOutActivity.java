@@ -67,7 +67,7 @@ public class CheckOutActivity extends AppCompatActivity {
     ArrayList<AddOnItem> addOnItemArrayList2 = new ArrayList<>();
     ArrayList<AddOnItem> addOnItemArrayList3 = new ArrayList<>();
     ArrayList<AddOnItem> addOnItemArrayList4 = new ArrayList<>();
-    String catProductTitle, catProduct, catProduct_Id, yrfProduct, yrfProduct_Id, ePosterProduct, ePosterProduct_Id, currencyType, catPrice, yrfPrice, eposterPrice;
+    String catProductTitle, catProduct, catProduct_Id, currencyType, catPrice;
     @BindView(R.id.checkoutRecycler)
     RecyclerView checkoutRecycler;
 
@@ -114,7 +114,7 @@ public class CheckOutActivity extends AppCompatActivity {
         Bundle bundle = intent.getBundleExtra("checkOutData");
         if (bundle != null) {
             //addOnItemArrayList = (ArrayList<AddOnItem>) bundle.getSerializable("addonList");
-            addOnItemArrayList = bundle.getParcelableArrayList("addonList");
+            //addOnItemArrayList = bundle.getParcelableArrayList("addonList");
             conf_Id = bundle.getString("conf_Id");
             actionTitle = bundle.getString("title");
             shorttitle = bundle.getString("shorttitle");
@@ -129,12 +129,6 @@ public class CheckOutActivity extends AppCompatActivity {
             catProduct = bundle.getString("catProduct");
             catProduct_Id = bundle.getString("catProduct_Id");
             catPrice = bundle.getString("catPrice");
-            yrfProduct = bundle.getString("yrfProduct");
-            yrfProduct_Id = bundle.getString("yrfProduct_Id");
-            yrfPrice = bundle.getString("yrfPrice");
-            ePosterProduct = bundle.getString("ePosterProduct");
-            ePosterProduct_Id = bundle.getString("ePosterProduct_Id");
-            eposterPrice = bundle.getString("eposterPrice");
             currencyType = bundle.getString("currencyType");
             totalAmount = bundle.getString("totalAmount");
 
@@ -151,22 +145,6 @@ public class CheckOutActivity extends AppCompatActivity {
 
             addOnItemArrayList.addAll(addOnItemArrayList1);
 
-            // yrfProduct data
-            if (!yrfProduct.equalsIgnoreCase("") || !yrfProduct_Id.equalsIgnoreCase("") || !yrfPrice.equalsIgnoreCase("0")) {
-                addOnItemArrayList2.add(new AddOnItem(yrfProduct_Id, yrfProduct, yrfPrice, "add", "Young Research Form"));
-            } else {
-                addOnItemArrayList2.clear();
-            }
-            addOnItemArrayList.addAll(addOnItemArrayList2);
-
-            // eposterProduct data
-            if (!ePosterProduct.equalsIgnoreCase("") || !ePosterProduct_Id.equalsIgnoreCase("") || !eposterPrice.equalsIgnoreCase("0")) {
-                addOnItemArrayList3.add(new AddOnItem(ePosterProduct_Id, ePosterProduct, eposterPrice, "add", "Eposter"));
-            } else {
-                addOnItemArrayList3.clear();
-
-            }
-            addOnItemArrayList.addAll(addOnItemArrayList3);
 
             jsonData(addOnItemArrayList);
 
@@ -199,25 +177,30 @@ public class CheckOutActivity extends AppCompatActivity {
             jsonObject.addProperty("email", emailID);
             jsonObject.addProperty("phone", mobileNumber);
             jsonObject.addProperty("country", country);
+            jsonObject.addProperty("app_user_id", app_user_id);
+            jsonObject.addProperty("date_type", productType);
             jsonObject.addProperty("amount", totalAmount);
             jsonObject.addProperty("gateway", "stripe");
             jsonObject.addProperty("payment_page", "android");
-            jsonObject.addProperty("source", "android");
-            jsonObject.addProperty("app_user_id", app_user_id);
+
+
 
             if (currencyType.equalsIgnoreCase("$")) {
-                jsonObject.addProperty("currency", "usd");
+                jsonObject.addProperty("currency_code", "USD");
+                jsonObject.addProperty("currency_symbol", "$");
             } else if (currencyType.equalsIgnoreCase("\u20ac")) {
-                jsonObject.addProperty("currency", "euro");
+                jsonObject.addProperty("currency_code", "EUR");
+                jsonObject.addProperty("currency_symbol", "\u20ac");
             } else {
-                jsonObject.addProperty("currency", "gbp");
+                jsonObject.addProperty("currency_code", "GBP");
+                jsonObject.addProperty("currency_symbol", "\u00a3");
             }
             JsonArray jsonArray = new JsonArray();
 
             for (AddOnItem addOnItem : addOnItemArrayList) {
                 JsonObject imgObject = new JsonObject();
                 imgObject.addProperty("product_id", addOnItem.getRegproducts_id());
-                imgObject.addProperty("product_type", productType);
+                imgObject.addProperty("price", addOnItem.getPrice());
                 jsonArray.add(imgObject);
 
             }
@@ -518,11 +501,14 @@ public class CheckOutActivity extends AppCompatActivity {
             jsonObject.addProperty("status", status);
 
             if (currencyType.equalsIgnoreCase("$")) {
-                jsonObject.addProperty("currency", "usd");
+                jsonObject.addProperty("currency_code", "USD");
+                jsonObject.addProperty("currency_symbol", "$");
             } else if (currencyType.equalsIgnoreCase("\u20ac")) {
-                jsonObject.addProperty("currency", "euro");
+                jsonObject.addProperty("currency_code", "EUR");
+                jsonObject.addProperty("currency_symbol", "\u20ac");
             } else {
-                jsonObject.addProperty("currency", "gbp");
+                jsonObject.addProperty("currency_code", "GBP");
+                jsonObject.addProperty("currency_symbol", "\u00a3");
             }
             Log.d(TAG, "paymentData: " + jsonObject);
 

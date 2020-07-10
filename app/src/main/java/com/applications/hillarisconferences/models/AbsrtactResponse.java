@@ -7,7 +7,7 @@ public class AbsrtactResponse {
 
     /**
      * status : true
-     * result : [{"title":"22<sup>nd<\/sup> World Congress on Toxicology and Pharmacology","conf_type":"webinar","city":"Kyoto","country":"India","name":"Dr Narahari","email":"naraharipatel1954@gmail.com","phone":"+91-7889135117","category":"Oral","track_name":"Forensic Toxicology","address":"#518/1 Pink Flat, Housefed Complex, Pakhowal Road \r\nLudhiana,Punjab INDIA\r\nPin Code 141013","date_of_submission":"2020-06-13","file":"http://omicsgroup.com/registration/abstract-download.php?filename=toxicology-congress-2020-192065-Abstract.docx"},{"title":"28<sup>th<\/sup> International Diabetes and Healthcare Conference","conf_type":"webinar","city":"Helsinki","country":"India","name":"Mr ABHISHEK","email":"abhishri2002@yahoo.com","phone":"8718035040","category":"Oral","track_name":"Diabetes: Types and Complications","address":"wright town jabalpur  madhya pradesh  india","date_of_submission":"2020-06-13","file":"http://omicsgroup.com/registration/abstract-download.php?filename=diabetic-2020-192066-Abstract.docx"}]
+     * result : [{"short_name":"Trauma, Emergency Medicine & Critical Care 2020","country":"Italy","name":"Anil K","email":"anilwesley94@gmail.com","phone":"121212121212","address":"fsfsfsfsf","category":"Poster","track_name":null,"date_of_submission":"July 09, 2020","file":"https://s3.amazonaws.com/hilaris/abstracts/emergencymedicine-60-1594310223.docx"}]
      */
 
     private boolean status;
@@ -31,57 +31,36 @@ public class AbsrtactResponse {
 
     public static class ResultBean {
         /**
-         * title : 22<sup>nd</sup> World Congress on Toxicology and Pharmacology
-         * conf_type : webinar
-         * city : Kyoto
-         * country : India
-         * name : Dr Narahari
-         * email : naraharipatel1954@gmail.com
-         * phone : +91-7889135117
-         * category : Oral
-         * track_name : Forensic Toxicology
-         * address : #518/1 Pink Flat, Housefed Complex, Pakhowal Road
-         Ludhiana,Punjab INDIA
-         Pin Code 141013
-         * date_of_submission : 2020-06-13
-         * file : http://omicsgroup.com/registration/abstract-download.php?filename=toxicology-congress-2020-192065-Abstract.docx
+         * short_name : Trauma, Emergency Medicine & Critical Care 2020
+         * country : Italy
+         * name : Anil K
+         * email : anilwesley94@gmail.com
+         * phone : 121212121212
+         * address : fsfsfsfsf
+         * category : Poster
+         * track_name : null
+         * date_of_submission : July 09, 2020
+         * file : https://s3.amazonaws.com/hilaris/abstracts/emergencymedicine-60-1594310223.docx
          */
 
-        private String title;
-        private String conf_type;
-        private String city;
+        private String short_name;
         private String country;
         private String name;
         private String email;
         private String phone;
+        private String address;
         private String category;
         private String track_name;
-        private String address;
+
         private String date_of_submission;
         private String file;
 
-        public String getTitle() {
-            return title;
+        public String getShort_name() {
+            return short_name;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getConf_type() {
-            return conf_type;
-        }
-
-        public void setConf_type(String conf_type) {
-            this.conf_type = conf_type;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public void setCity(String city) {
-            this.city = city;
+        public void setShort_name(String short_name) {
+            this.short_name = short_name;
         }
 
         public String getCountry() {
@@ -100,6 +79,14 @@ public class AbsrtactResponse {
             this.name = name;
         }
 
+        public String getTrack_name() {
+            return track_name;
+        }
+
+        public void setTrack_name(String track_name) {
+            this.track_name = track_name;
+        }
+
         public String getEmail() {
             return email;
         }
@@ -116,6 +103,14 @@ public class AbsrtactResponse {
             this.phone = phone;
         }
 
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
         public String getCategory() {
             return category;
         }
@@ -124,21 +119,7 @@ public class AbsrtactResponse {
             this.category = category;
         }
 
-        public String getTrack_name() {
-            return track_name;
-        }
 
-        public void setTrack_name(String track_name) {
-            this.track_name = track_name;
-        }
-
-        public String getAddress() {
-            return address;
-        }
-
-        public void setAddress(String address) {
-            this.address = address;
-        }
 
         public String getDate_of_submission() {
             return date_of_submission;

@@ -119,8 +119,10 @@
     </string-array>
     <string-array name="category">
         <item value="Academic">Academic</item>
-        <item value="Business">Business</item>
+        <item value="Business">Industry/Business</item>
         <item value="Student">Student</item>
+        <item value="ePoster">ePoster</item>
+        <item value="Webinar">Webinar</item>
     </string-array>
 
 

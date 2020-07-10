@@ -59,10 +59,10 @@ public class RegistrationsListAdapter extends RecyclerView.Adapter<Registrations
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.txtTitle.setText(Html.fromHtml(categories.get(position).getTitle()));
+        holder.txtTitle.setText(Html.fromHtml(categories.get(position).getShort_name()));
         holder.txtOrderNo.setText("Order Id : "+categories.get(position).getOrder_no());
 
-        holder.txtPrice.setText(categories.get(position).getCurrency()+" " +categories.get(position).getPrice());
+        holder.txtPrice.setText(categories.get(position).getAmount());
 
 
     }

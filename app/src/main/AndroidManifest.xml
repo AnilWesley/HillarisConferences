@@ -63,9 +63,6 @@
             android:name=".activity.PersonalInfoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PaymentActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>

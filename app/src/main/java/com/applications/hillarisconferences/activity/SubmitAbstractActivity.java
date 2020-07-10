@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.webkit.DownloadListener;
 import android.webkit.MimeTypeMap;
 import android.webkit.WebView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -111,9 +112,10 @@ public class SubmitAbstractActivity extends AppCompatActivity implements Progres
     String email;
     String phone;
     String category;
-    String trackName;
+    String trackName,trackId;
 
     List<String> trackNameList;
+    List<String> trackIdList;
     String date;
 
     int REQUEST_CODE_DOC = 1;
@@ -157,7 +159,9 @@ public class SubmitAbstractActivity extends AppCompatActivity implements Progres
         editEmail.setText(myAppPrefsManager.getUserEmail());
 
         trackNameList = new ArrayList<>();
+        trackIdList = new ArrayList<>();
         trackNameList.add("Select Track Name");
+        trackIdList.add("0");
 
         Date c = Calendar.getInstance().getTime();
 
@@ -313,13 +317,17 @@ public class SubmitAbstractActivity extends AppCompatActivity implements Progres
                     if (events.isStatus()) {
 
                         trackNameList.clear();
+                        trackIdList.clear();
                         trackNameList.add("Select Track Name");
+                        trackIdList.add("0");
                         List<TrackName.TracksBean> conferencesBeanList = events.getTracks();
                         Log.d(TAG, "onResponse: " + conferencesBeanList.size());
 
                         for (TrackName.TracksBean trackName : conferencesBeanList) {
-                            String trackName1 = trackName.getTrackName();
+                            String trackName1 = trackName.getTrack_name();
+                            String trackId = trackName.getTrack_id();
                             trackNameList.add(trackName1);
+                            trackIdList.add(trackId);
                         }
 
                         ArrayAdapter<String> adapter =
@@ -327,28 +335,73 @@ public class SubmitAbstractActivity extends AppCompatActivity implements Progres
                         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                         spinnerTrackName.setAdapter(adapter);
+                        spinnerTrackName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                trackName=spinnerTrackName.getSelectedItem().toString();
+                                trackId = trackIdList.get(position);
+                                Log.d(TAG, "onItemSelected: "+trackIdList.get(position));
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+
+                            }
+                        });
 
 
                     } else {
                         trackNameList.clear();
+                        trackIdList.clear();
                         trackNameList.add("Select Track Name");
+                        trackIdList.add("0");
                         trackNameList.add("No Tracks");
+                        trackIdList.add("0");
                         ArrayAdapter<String> adapter =
                                 new ArrayAdapter<>(SubmitAbstractActivity.this, android.R.layout.simple_spinner_dropdown_item, trackNameList);
                         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                         spinnerTrackName.setAdapter(adapter);
+                        spinnerTrackName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                 trackName=spinnerTrackName.getSelectedItem().toString();
+                                trackId = trackIdList.get(position);
+                                Log.d(TAG, "onItemSelected: "+trackIdList.get(position));
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+
+                            }
+                        });
 
                     }
                 } else {
                     trackNameList.clear();
+                    trackIdList.clear();
                     trackNameList.add("Select Track Name");
+                    trackIdList.add("0");
                     trackNameList.add("No Tracks");
+                    trackIdList.add("0");
                     ArrayAdapter<String> adapter =
                             new ArrayAdapter<>(SubmitAbstractActivity.this, android.R.layout.simple_spinner_dropdown_item, trackNameList);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                     spinnerTrackName.setAdapter(adapter);
+                    spinnerTrackName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            trackName=spinnerTrackName.getSelectedItem().toString();
+                            trackId = trackIdList.get(position);
+                            Log.d(TAG, "onItemSelected: "+trackIdList.get(position));
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
 
                 }
             }
@@ -393,14 +446,14 @@ public class SubmitAbstractActivity extends AppCompatActivity implements Progres
         RequestBody phone1 = RequestBody.create(MediaType.parse("text/plain"), phone);
         RequestBody country1 = RequestBody.create(MediaType.parse("text/plain"), country);
         RequestBody category1 = RequestBody.create(MediaType.parse("text/plain"), category);
-        RequestBody trackName1 = RequestBody.create(MediaType.parse("text/plain"), trackName);
+        RequestBody trackId1 = RequestBody.create(MediaType.parse("text/plain"), trackId);
         RequestBody address1 = RequestBody.create(MediaType.parse("text/plain"), address);
         RequestBody date1 = RequestBody.create(MediaType.parse("text/plain"), date);
         RequestBody app_user_id1 = RequestBody.create(MediaType.parse("text/plain"), app_user_id);
         RequestBody source1 = RequestBody.create(MediaType.parse("text/plain"), "android");
 
         Call<SubmitAbstract> call = apiInterface.processDataSendAbstract(fileToUpload, conf_id1, title1, name1, country1, email1,
-                phone1, category1, trackName1, address1, date1, app_user_id1, source1);
+                phone1, category1, trackId1, address1, date1, app_user_id1, source1);
 
         call.enqueue(new Callback<SubmitAbstract>() {
             @Override

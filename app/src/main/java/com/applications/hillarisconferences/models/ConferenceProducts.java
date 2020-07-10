@@ -7,7 +7,21 @@ import java.util.List;
 public class ConferenceProducts {
 
 
+    /**
+     * status : true
+     * registration_products : [{"productid":"354","type":"Academic","productname":"Combo A (Registration + 2 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"355","type":"Academic","productname":"Combo B (Registration + 3 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"356","type":"Academic","productname":"Only Registration","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"357","type":"Industry/Business","productname":"Combo A (Registration + 2 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"358","type":"Industry/Business","productname":"Combo B (Registration + 3 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"359","type":"Industry/Business","productname":"Only Registration","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"360","type":"Student","productname":"Combo A (Registration + 2 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"361","type":"Student","productname":"Combo B (Registration + 3 Nights' Accommodation)","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"362","type":"Student","productname":"Only Registration","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"363","type":"Addon","productname":"Video Presentation","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"364","type":"Addon","productname":"Accompanying person","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"365","type":"Addon","productname":"Poster Presentation","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"},{"productid":"366","type":"ePoster","productname":"E-Poster","price1":"899","price2":"999","price3":"0","price4":"740","price5":"820","price6":"0","price7":"830","price8":"920","price9":"0","early":"2019-12-30","final":"2020-09-17"}]
+     */
+
+    private boolean status;
     private List<RegistrationProductsBean> registration_products;
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 
     public List<RegistrationProductsBean> getRegistration_products() {
         return registration_products;
@@ -19,32 +33,24 @@ public class ConferenceProducts {
 
     public static class RegistrationProductsBean {
         /**
-         * regproducts_id : 83756
-         * productname : Young Research Forum
-         * price1 : 399
-         * price2 : 499
-         * price3 : 599
-         * price4 : 380
-         * price5 : 470
-         * price6 : 560
-         * price7 : 340
-         * price8 : 420
-         * price9 : 500
-         * price10 : 0
-         * price11 : 0
-         * price12 : 0
-         * status : Active
-         * position : 0
-         * confid : 6289
-         * createdat : 2019-12-24 04:17:51
-         * modifiedat : 2019-12-24 04:17:51
-         * type : yrf
-         * early : February 29, 2020
-         * normal : March 28, 2020
-         * final : April 17, 2020
+         * productid : 354
+         * type : Academic
+         * productname : Combo A (Registration + 2 Nights' Accommodation)
+         * price1 : 899
+         * price2 : 999
+         * price3 : 0
+         * price4 : 740
+         * price5 : 820
+         * price6 : 0
+         * price7 : 830
+         * price8 : 920
+         * price9 : 0
+         * early : 2019-12-30
+         * final : 2020-09-17
          */
 
-        private String regproducts_id;
+        private String productid;
+        private String type;
         private String productname;
         private String price1;
         private String price2;
@@ -55,26 +61,24 @@ public class ConferenceProducts {
         private String price7;
         private String price8;
         private String price9;
-        private String price10;
-        private String price11;
-        private String price12;
-        private String status;
-        private String position;
-        private String confid;
-        private String createdat;
-        private String modifiedat;
-        private String type;
         private String early;
-        private String normal;
         @SerializedName("final")
         private String finalX;
 
-        public String getRegproducts_id() {
-            return regproducts_id;
+        public String getProductid() {
+            return productid;
         }
 
-        public void setRegproducts_id(String regproducts_id) {
-            this.regproducts_id = regproducts_id;
+        public void setProductid(String productid) {
+            this.productid = productid;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
         }
 
         public String getProductname() {
@@ -157,92 +161,12 @@ public class ConferenceProducts {
             this.price9 = price9;
         }
 
-        public String getPrice10() {
-            return price10;
-        }
-
-        public void setPrice10(String price10) {
-            this.price10 = price10;
-        }
-
-        public String getPrice11() {
-            return price11;
-        }
-
-        public void setPrice11(String price11) {
-            this.price11 = price11;
-        }
-
-        public String getPrice12() {
-            return price12;
-        }
-
-        public void setPrice12(String price12) {
-            this.price12 = price12;
-        }
-
-        public String getStatus() {
-            return status;
-        }
-
-        public void setStatus(String status) {
-            this.status = status;
-        }
-
-        public String getPosition() {
-            return position;
-        }
-
-        public void setPosition(String position) {
-            this.position = position;
-        }
-
-        public String getConfid() {
-            return confid;
-        }
-
-        public void setConfid(String confid) {
-            this.confid = confid;
-        }
-
-        public String getCreatedat() {
-            return createdat;
-        }
-
-        public void setCreatedat(String createdat) {
-            this.createdat = createdat;
-        }
-
-        public String getModifiedat() {
-            return modifiedat;
-        }
-
-        public void setModifiedat(String modifiedat) {
-            this.modifiedat = modifiedat;
-        }
-
-        public String getType() {
-            return type;
-        }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
         public String getEarly() {
             return early;
         }
 
         public void setEarly(String early) {
             this.early = early;
-        }
-
-        public String getNormal() {
-            return normal;
-        }
-
-        public void setNormal(String normal) {
-            this.normal = normal;
         }
 
         public String getFinalX() {

@@ -59,9 +59,9 @@ public class AbsrtactListAdapter extends RecyclerView.Adapter<AbsrtactListAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.txtTitle.setText(Html.fromHtml(categories.get(position).getTitle()));
+        holder.txtTitle.setText(Html.fromHtml(categories.get(position).getShort_name()));
         holder.txtTractName.setText(categories.get(position).getTrack_name());
-        holder.txtConfType.setText( categories.get(position).getConf_type()+" ( "+ categories.get(position).getDate_of_submission()+" ) ");
+        holder.txtConfType.setText( categories.get(position).getCategory()+" ( "+ categories.get(position).getDate_of_submission()+" ) ");
 
 
 
