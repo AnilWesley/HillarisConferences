@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('E:\\Android projects\\HillarisConferences\\jks\\hillariscon.jks')
+            storePassword 'Hillaris@123'
+            keyAlias 'Hillaris'
+            keyPassword 'Hillaris@123'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
@@ -13,6 +21,7 @@ android {
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
