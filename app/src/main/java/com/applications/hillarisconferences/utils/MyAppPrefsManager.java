@@ -36,8 +36,8 @@ public class MyAppPrefsManager {
     private static final String LOCAL_NOTIFICATIONS_DESCRIPTION = "localNotificationsDescription";
 
 
-    public static final String DD_MMM_YYYY_DATE_FORMAT = "MMMM dd";
-    public static final String DD_MMM_YYYY_DATE_FORMAT1 = "MMMM dd, yyyy";
+    public static final String DD_MMM_YYYY_DATE_FORMAT = "MMM dd";
+    public static final String DD_MMM_YYYY_DATE_FORMAT1 = "MMM dd, yyyy";
 
 
 

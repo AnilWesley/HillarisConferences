@@ -128,7 +128,7 @@ public class PaymentActivity1 extends AppCompatActivity {
             emailID = getIntent().getStringExtra("emailID");
             country = getIntent().getStringExtra("country");
         }
-        currentDate = new SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault()).format(new Date());
+        currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
 
 
         currencyType = "\u00a3";
@@ -382,7 +382,7 @@ public class PaymentActivity1 extends AppCompatActivity {
                             try {
 
                                 @SuppressLint("SimpleDateFormat")
-                                SimpleDateFormat formatter = new SimpleDateFormat("MMMM dd, yyyy");
+                                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
                                 Date date1 = formatter.parse(currentDate);
 
