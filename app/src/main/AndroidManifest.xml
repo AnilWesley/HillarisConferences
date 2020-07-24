@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.applications.hillarisconferences">
+    package="com.applications.hillaris">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +13,7 @@
         android:name="android.hardware.camera"
         android:required="true" />
     <application
-        android:name=".app.AppController"
+        android:name="com.applications.hillaris.app.AppController"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,58 +24,58 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
-        <activity android:name=".activity.SubmitVideoActivity"
+        <activity android:name="com.applications.hillaris.activity.SubmitVideoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.SubmitAudioActivity"
+        <activity android:name="com.applications.hillaris.activity.SubmitAudioActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".activity.SubmitPresentationActivity"
+            android:name="com.applications.hillaris.activity.SubmitPresentationActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.RegistrationsListActivity"
+            android:name="com.applications.hillaris.activity.RegistrationsListActivity"
             android:label="@string/title_activity_registrations_list"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SessionsandTracksActivity"
+            android:name="com.applications.hillaris.activity.SessionsandTracksActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AboutUsActivity"
+            android:name="com.applications.hillaris.activity.AboutUsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ContactUsActivity"
+            android:name="com.applications.hillaris.activity.ContactUsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FeedBackActivity"
+            android:name="com.applications.hillaris.activity.FeedBackActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FilterActivity"
+            android:name="com.applications.hillaris.activity.FilterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.UserLoginActivity"
+            android:name="com.applications.hillaris.activity.UserLoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.UserRegistrationActivity"
+            android:name="com.applications.hillaris.activity.UserRegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.BrochureDownloadActivity"
+            android:name="com.applications.hillaris.activity.BrochureDownloadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SubmitAbstractActivity"
+            android:name="com.applications.hillaris.activity.SubmitAbstractActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".activity.CheckOutActivity"
+            android:name="com.applications.hillaris.activity.CheckOutActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".activity.PaymentActivity1"
+            android:name="com.applications.hillaris.activity.PaymentActivity1"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PersonalInfoActivity"
+            android:name="com.applications.hillaris.activity.PersonalInfoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.applications.hillaris.activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,10 +84,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.DashBoardActivity"
+            android:name="com.applications.hillaris.activity.DashBoardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.HomeActivity"
+            android:name="com.applications.hillaris.activity.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNav">
             <intent-filter>

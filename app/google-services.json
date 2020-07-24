@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88493436875:android:cfd08612607cbba681504e",
+        "mobilesdk_app_id": "1:88493436875:android:43ead51ef5cb8d5c81504e",
         "android_client_info": {
-          "package_name": "com.applications.hillarisconferences"
+          "package_name": "com.applications.hillaris"
         }
       },
       "oauth_client": [

@@ -1,27 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
+
     signingConfigs {
         release {
-            storeFile file('E:\\Android projects\\HillarisConferences\\jks\\hillariscon.jks')
-            storePassword 'Hillaris@123'
-            keyAlias 'Hillaris'
-            keyPassword 'Hillaris@123'
+            storeFile file('E:\\Android projects\\HillarisConferences\\jks\\hilaris.jks')
+            storePassword 'hilaris@123'
+            keyAlias 'hilaris'
+            keyPassword 'hilaris@123'
         }
     }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.applications.hillarisconferences"
+        applicationId "com.applications.hillaris"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.release
+
     }
 
     buildTypes {
@@ -50,8 +52,8 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.7.2"
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
     implementation "com.squareup.retrofit2:converter-gson:2.7.2"
-    implementation "com.github.bumptech.glide:glide:4.10.0"
-    annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
+    implementation "com.github.bumptech.glide:glide:4.11.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.11.0"
 
     // OkHttp & GSON
     implementation 'com.squareup.okhttp3:okhttp:4.4.0'
@@ -101,7 +103,7 @@ dependencies {
 
 
     implementation 'com.google.firebase:firebase-auth:19.3.2'
-    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 
     implementation 'com.google.firebase:firebase-config:19.2.0'
 
